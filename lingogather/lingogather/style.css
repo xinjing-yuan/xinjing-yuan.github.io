@@ -1,0 +1,67 @@
+/* Shared layout for the support and privacy pages. */
+@import url("palette.css");
+
+body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang TC", "PingFang SC", sans-serif;
+    -webkit-text-size-adjust: 100%;
+}
+
+:lang(zh-Hant) { font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", sans-serif; }
+:lang(zh-Hans) { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif; }
+
+main, .top, footer {
+    width: min(680px, calc(100% - 40px));
+    margin-inline: auto;
+}
+
+main { padding-bottom: 36px; }
+
+a { color: var(--accent); text-underline-offset: .2em; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+
+.top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px 20px;
+    padding-block: 20px 14px;
+    border-bottom: 1px solid var(--line);
+    font-size: 15px;
+}
+
+.top .app {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--ink);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.top .app img { width: 32px; height: 32px; }
+
+.top nav { display: flex; flex-wrap: wrap; gap: 4px 16px; }
+.related { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 24px; }
+
+section { padding-top: 28px; }
+section + section { margin-top: 36px; border-top: 1px solid var(--line); }
+
+h1 { margin: 0 0 4px; font-size: 32px; line-height: 1.25; }
+h2 { margin: 32px 0 8px; font-size: 21px; }
+h3 { margin: 24px 0 4px; font-size: 17px; }
+p, ul, ol { margin: 0 0 12px; }
+ul, ol { padding-left: 1.3em; }
+li + li { margin-top: 6px; }
+
+.date, .lead { color: var(--muted); }
+
+footer {
+    padding-block: 14px 32px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 14px;
+}
